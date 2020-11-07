@@ -39,7 +39,7 @@
         <a class="nav-link" href="{{url('/reservas')}}">Reservas</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{{url('/contactos')}}">Contactos</a>
+        <a class="nav-link" href="{{url('/contactanos')}}">Contactos</a>
       </li>
     </ul>
   </div>

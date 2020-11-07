@@ -41,8 +41,8 @@ Route::get('reservas', function () {
     return view('reservas.reservas');
 });
 // Ruta contáctos
-Route::get('contactos', function () {
-    return view('contactos');
+Route::get('contactanos', function () {
+    return view('contacto');
 });
 
 
