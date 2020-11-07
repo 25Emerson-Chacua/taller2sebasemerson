@@ -34,7 +34,7 @@ Route::get('servicios/habitaciones', function () {
 });
 // Ruta servicios/eventos con parametro
 Route::get('servicios/eventos/{id}', function ($id) {
-    return "Eventos {$id}" ;
+    return view('servicios.eventos', array('id'=> $id));
 });
 // Ruta reservas
 Route::get('reservas', function () {

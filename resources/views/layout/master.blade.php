@@ -44,9 +44,6 @@
                     <li>
                         <a href="#!">WhatsApp: 310 389 56 09</a>
                     </li>
-                    <li>
-                        <a href="#!">online@lalicorera.com</a>
-                    </li>
 
                 </ul>
 
