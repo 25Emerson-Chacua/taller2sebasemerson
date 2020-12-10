@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HotelController;
+use App\Http\Controllers\HabitacionesController;
+use App\Http\Controllers\ClientesController;
+use App\Http\Controllers\FacturacionController;
+use App\Http\Controllers\ReservasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,36 +18,27 @@ use Illuminate\Support\Facades\Route;
 |
 */
 //Ruta /
-Route::get('/', function () {
-    return view('principal');
-});
+Route::get('/', [HotelController::class, 'getIndex']) ;
 //Ruta hotel/historia
-Route::get('hotel/historia', function () {
-    return view('hotel.historia');
-});
+Route::get('hotel/historia', [HotelController::class, 'showHistoria']) ;
 // ruta hotel/mision-vision
-Route::get('hotel/mision-vision', function () {
-    return view('hotel.vision');
-});
+Route::get('hotel/mision-vision', [HotelController::class, 'showMision']) ;
 // ruta hotel/ubicacion
-Route::get('hotel/ubicacion', function () {
-    return view('hotel.ubicacion');
-});
+Route::get('hotel/ubicacion', [HotelController::class, 'showUbicacion']) ;
 // Ruta servicios/habitaciones
-Route::get('servicios/habitaciones', function () {
-    return view('servicios.habitaciones');
-});
+Route::get('servicios/habitaciones',[HabitacionesController::class, 'showHabitaciones']) ;
 // Ruta servicios/eventos con parametro
 Route::get('servicios/eventos/{id}', function ($id) {
     return view('servicios.eventos', array('id'=> $id));
 });
+//Ruta visualizar cliente
+
+Route::get('clientes/visualizar', [ClientesController::class, 'showClientes']) ;
 // Ruta reservas
-Route::get('reservas', function () {
-    return view('reservas.reservas');
-});
+Route::get('reservas', [ReservasController::class, 'getReservas']) ;
+// Ruta Facturacion
+Route::get('facturacion', [FacturacionController::class, 'getFactura']) ;
 // Ruta contáctos
-Route::get('contactanos', function () {
-    return view('contacto');
-});
+Route::get('contactenos', [HotelController::class, 'showContactos']) ;
 
 
