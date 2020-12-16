@@ -43,6 +43,14 @@
           <a class="dropdown-item" href="{{url('/clientes/visualizar')}}">Visualizar</a>
         </div>
       </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">Consultas
+        </a>
+        <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
+          <a class="dropdown-item" href="{{url('/consultas/visualizar')}}">Visualizar</a>
+        </div>
+      </li>
       <li class="nav-item">
         <a class="nav-link" href="{{url('/reservas')}}">Reservas</a>
       </li>

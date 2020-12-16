@@ -6,7 +6,7 @@ use App\Http\Controllers\HabitacionesController;
 use App\Http\Controllers\ClientesController;
 use App\Http\Controllers\FacturacionController;
 use App\Http\Controllers\ReservasController;
-
+use App\Http\Controllers\ConsultasController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,6 +34,8 @@ Route::get('servicios/eventos/{id}', function ($id) {
 //Ruta visualizar cliente
 
 Route::get('clientes/visualizar', [ClientesController::class, 'showClientes']) ;
+//consultas
+Route::get('consultas/visualizar', [ConsultasController::class, 'showConsultas']) ;
 // Ruta reservas
 Route::get('reservas', [ReservasController::class, 'getReservas']) ;
 // Ruta Facturacion

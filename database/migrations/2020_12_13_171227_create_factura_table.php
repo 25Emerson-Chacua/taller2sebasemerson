@@ -16,13 +16,14 @@ class CreateFacturaTable extends Migration
         Schema::create('factura', function (Blueprint $table) {
             $table->integer('CodigoF')->autoIncrement();
             $table->integer('Numero');
-            $table->foreign('Numero')->references('id')->on('formaPago');
+            $table->foreign('Numero')->references('Numero')->on('habitacion');
             $table->integer('cliente');
             $table->foreign('cliente')->references('id')->on('cliente');
             $table->integer('formaPago');
             $table->foreign('formaPago')->references('id')->on('formaPago');
             $table->datetime('Entrada');
-            $table->datetime('Salida');
+            $table->datetime('Salida')->nullable($value = true);
+            $table->double('Total',8,2);
             $table->timestamps();
         });
     }

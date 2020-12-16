@@ -16,7 +16,7 @@
   <div class="carousel-inner" role="listbox">
     <div class="carousel-item active">
       <div class="view">
-        <img class="d-block w-100" src="{{ url('/imagenes/7.jpg') }}" height="100" alt="First slide">
+        <img class="d-block w-100" src="{{ url('/imagenes/7.jpg') }}" height="400"  alt="First slide">
         <div class="mask rgba-black-light"></div>
       </div>
       <div class="carousel-caption">
@@ -26,8 +26,7 @@
     <div class="carousel-item">
       <!--Mask color-->
       <div class="view">
-        <img class="d-block w-100" src="{{ url('/imagenes/8.jpg') }}"
-        height="400" alt="Second slide">
+        <img class="d-block w-100" src="{{ url('/imagenes/8.jpg') }}"height="400" alt="Second slide">
         <div class="mask rgba-black-strong"></div>
       </div>
       <div class="carousel-caption">
@@ -49,5 +48,42 @@
   <!--/.Controls-->
 </div>
 <!--/.Carousel Wrapper-->
+
+
+    <h1> Categorias de Productos </h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">DNI</th>
+            <th scope="col">Nombres </th>
+            <th scope="col">Genero </th>
+            <th scope="col">Domilio </th>
+            <th scope="col">Telefono </th>
+            <th scope="col">Foto </th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach($clientes as $c)
+      
+            <tr>
+            <td> {{ $c->id }} </td>
+            <td> {{ $c->DNI }} </td>
+            <td> {{ $c->nombres }} </td>
+            <td> {{ $c->genero }}</td>
+            <td> {{ $c->Domicilio }} </td>
+            <td> {{ $c->Telefono }}</td>
+            <td> <img src='{{url("/img/img/$c->foto")}}'  height="50" width="50" alt="..."> </td>
+            
+            </tr>
+        
+    @endforeach
+    </tbody>
+</table
+
+
+
+
+
 
     @stop

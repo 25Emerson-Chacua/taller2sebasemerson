@@ -4,10 +4,10 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
-class ClientesController extends Controller
+class ConsultasController extends Controller
 {
     //
-    public function showClientes(){
+    public function showConsultas(){
 
         $clientes = DB::table('cliente')->orderBy('nombres')->get();
 

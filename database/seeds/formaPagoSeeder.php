@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class formaPagoSedeer extends Seeder
+class formaPagoSeeder extends Seeder
 {
     /**
      * Run the database seeds.
