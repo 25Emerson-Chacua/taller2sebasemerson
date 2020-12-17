@@ -35,7 +35,8 @@ Route::get('servicios/eventos/{id}', function ($id) {
 
 Route::get('clientes/visualizar', [ClientesController::class, 'showClientes']) ;
 //consultas
-Route::get('consultas/visualizar', [ConsultasController::class, 'showConsultas']) ;
+Route::get('consultas/HabitacionesSinSalida', [ConsultasController::class, 'showConsultas']);
+Route::get('consultas/CantidadHabitaciones', [ConsultasController::class, 'ConsultasCantidad']);
 // Ruta reservas
 Route::get('reservas', [ReservasController::class, 'getReservas']) ;
 // Ruta Facturacion

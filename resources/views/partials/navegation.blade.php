@@ -48,7 +48,8 @@
           aria-haspopup="true" aria-expanded="false">Consultas
         </a>
         <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
-          <a class="dropdown-item" href="{{url('/consultas/visualizar')}}">Visualizar</a>
+          <a class="dropdown-item" href="{{url('/consultas/HabitacionesSinSalida')}}">Habitaciones sin fecha de salida</a>
+          <a class="dropdown-item" href="{{url('/consultas/CantidadHabitaciones')}}">Cantidad de Habitaciones por tipo</a>
         </div>
       </li>
       <li class="nav-item">
