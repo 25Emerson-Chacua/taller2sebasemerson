@@ -1,89 +1,48 @@
 @extends('layout.master')
-    @section('content')
-    
-
-    
-<!--Carousel Wrapper-->
-<div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
-  <!--Indicators-->
-  <ol class="carousel-indicators">
-    <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-2" data-slide-to="1"></li>
-    <li data-target="#carousel-example-2" data-slide-to="2"></li>
-  </ol>
-  <!--/.Indicators-->
-  <!--Slides-->
-  <div class="carousel-inner" role="listbox">
-    <div class="carousel-item active">
-      <div class="view">
-        <img class="d-block w-100" src="{{ url('/imagenes/7.jpg') }}" height="400"  alt="First slide">
-        <div class="mask rgba-black-light"></div>
-      </div>
-      <div class="carousel-caption">
-        <h3 class="h3-responsive">Visualizar Clientes</h3>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <!--Mask color-->
-      <div class="view">
-        <img class="d-block w-100" src="{{ url('/imagenes/8.jpg') }}"height="400" alt="Second slide">
-        <div class="mask rgba-black-strong"></div>
-      </div>
-      <div class="carousel-caption">
-        <h3 class="h3-responsive">Clientes</h3>
-      </div>
-    </div>
-    
-  </div>
-  <!--/.Slides-->
-  <!--Controls-->
-  <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-  <!--/.Controls-->
-</div>
-<!--/.Carousel Wrapper-->
+@section('content')
 
 
-    <h1> Categorias de Productos </h1>
-<table class="table">
-    <thead>
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">DNI</th>
-            <th scope="col">Nombres </th>
-            <th scope="col">Genero </th>
-            <th scope="col">Domilio </th>
-            <th scope="col">Telefono </th>
-            <th scope="col">Foto </th>
-        </tr>
-    </thead>
-    <tbody>
-    @foreach($clientes as $c)
-      
+<body background="{{url('img/fondo.jpg')}}">
+  <!--Carousel Wrapper-->
+  <div class="container" align="center">
+    <h1 style="color: white"> CLIENTES </h1>
+    <h3 class="card-title font-weight-bold" align="center" style="color: white;"><a></a></h3>
+    <div style="color: white; background: rgba(5, 5, 5, 0.349)">
+
+      <!--/.Carousel Wrapper-->
+      <h3 align="center" style="color: white;"> LISTADO </h3>
+      <div class="form-row" style="color: white;">
+        <table class="table" style="color: white;">
+          <thead>
             <tr>
-            <td> {{ $c->id }} </td>
-            <td> {{ $c->DNI }} </td>
-            <td> {{ $c->nombres }} </td>
-            <td> {{ $c->genero }}</td>
-            <td> {{ $c->Domicilio }} </td>
-            <td> {{ $c->Telefono }}</td>
-            <td> <img src='{{url("/img/img/$c->foto")}}'  height="50" width="50" alt="..."> </td>
-            
+              <th scope="col">#</th>
+              <th scope="col">DNI</th>
+              <th scope="col">Nombres </th>
+              <th scope="col">Genero </th>
+              <th scope="col">Domilio </th>
+              <th scope="col">Telefono </th>
+              <th scope="col">Foto </th>
             </tr>
-        
-    @endforeach
-    </tbody>
-</table
+          </thead>
+          <tbody>
+            @foreach($clientes as $c)
 
+            <tr>
+              <td> {{ $c->id }} </td>
+              <td> {{ $c->DNI }} </td>
+              <td> {{ $c->nombres }} </td>
+              <td> {{ $c->genero }}</td>
+              <td> {{ $c->Domicilio }} </td>
+              <td> {{ $c->Telefono }}</td>
+              <td> <img src='{{url("/img/img/$c->foto")}}' height="50" width="50" alt="..."> </td>
 
+            </tr>
 
-
-
-
-    @stop
+            @endforeach
+          </tbody>
+        </table 
+      </div>
+    </div>
+  </div>
+</body>
+@stop 
