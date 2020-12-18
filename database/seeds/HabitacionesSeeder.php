@@ -43,6 +43,19 @@ class HabitacionesSeeder extends Seeder
                 'numCamas'=>'3',
                 'foto'=>'triple.jpg',
                 'precio_id'=>'5',
+            ],
+            [
+                'descripcion'=>'Es una Habitacion asignada a una persona.',
+                'numCamas'=>'1',
+                'foto'=>'sencilla.jpg',
+                'precio_id'=>'1',
+            
+            ],
+            [
+                'descripcion'=>'una habitacion con capacidad para tres personas',
+                'numCamas'=>'3',
+                'foto'=>'triple.jpg',
+                'precio_id'=>'5',
             ]
         ];
         DB::table('habitacion')->insert($datos);

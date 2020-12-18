@@ -20,7 +20,7 @@ class ConsultasController extends Controller
     }
 
     public function ConsultasCantidad(){
-     // $habitacion= DB::SELECT(' SELECT habitacion.Numero,descripcion,COUNT(precio_id)AS Numero_de_habitaciones,precio.id,Tipo FROM habitacion,precio WHERE habitacion.precio_id=precio.id GROUP BY habitacion.precio_id')
+    
      $habitacion = DB::table('precio as pre')
      ->select('pre.id',DB::raw('count(*) as cant'))
      ->join('habitacion as hab','pre.id','=','hab.precio_id')
@@ -33,6 +33,7 @@ class ConsultasController extends Controller
     }
 }
 /*
+ // $habitacion= DB::SELECT(' SELECT habitacion.Numero,descripcion,COUNT(precio_id)AS Numero_de_habitaciones,precio.id,Tipo FROM habitacion,precio WHERE habitacion.precio_id=precio.id GROUP BY habitacion.precio_id')
  $habitacion = DB::table('precio as pre')
         ->select('pre.id',DB::raw('count(*) as cant'))
         ->join('habitacion as hab','pre.id','=','hab.precio_id')

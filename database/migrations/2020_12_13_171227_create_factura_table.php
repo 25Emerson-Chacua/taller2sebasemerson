@@ -22,7 +22,7 @@ class CreateFacturaTable extends Migration
             $table->integer('formaPago');
             $table->foreign('formaPago')->references('id')->on('formaPago');
             $table->datetime('Entrada');
-            $table->datetime('Salida')->nullable($value = true);
+            $table->datetime('Salida')->nullable();
             $table->double('Total',8,2);
             $table->timestamps();
         });

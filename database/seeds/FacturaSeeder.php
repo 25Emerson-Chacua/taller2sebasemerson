@@ -53,6 +53,23 @@ class FacturaSeeder extends Seeder
                 'Entrada'=>'2020-12-10 16:15:10',
                 'Salida'=>'2020-12-11 10:16:50',
                 'Total'=>'60000'
+            ],
+            [
+                'Numero'=>'1',
+                'cliente'=>'1',
+                'formaPago'=>'1',
+                'Entrada'=>'2020-12-10 17:15:10',
+                'Salida'=>null,
+                'Total'=>'20000'
+            
+            ],
+            [
+                'Numero'=>'3',
+                'cliente'=>'2',
+                'formaPago'=>'2',
+                'Entrada'=>'2020-12-16 20:00:10',
+                'Salida'=>null,
+                'Total'=>'30000'
             ]
         ];
         DB::table('factura')->insert($datos);
