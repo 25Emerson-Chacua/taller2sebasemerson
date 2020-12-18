@@ -44,7 +44,12 @@
                     <li>
                         <a href="#!">WhatsApp: 310 389 56 09</a>
                     </li>
-
+                    <li>
+                   
+                        <a href="#!">Elaborado por: </a><br>
+                        <a href="#!">SEBASTIÁN DAVID CHAVES GARRETA</a>
+                        <a href="#!">EMERSON ALEXANDER CHACUA PÍSTALA</a>
+                    </li>
                 </ul>
 
             </div>
